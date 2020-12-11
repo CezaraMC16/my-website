@@ -1,6 +1,7 @@
 :root{
   --mainColor:#C2B4DF;
   --secColor:#5E5276;
+  --thrdColor:#B2A2DB;
 
   --borderColor:#9889B6;
 
@@ -18,11 +19,12 @@ html,body{
 h1, h2, h3, h4, h5, h6, strong {
   color: var(--textInitialization);
   font-family: 'Timmana', sans-serif;
+  font-weight: 500;
 }
 
 p, li, span, label, input, textarea{
   color: var(--sectextInitialization);
-    font-family: 'Fenix', serif;
+    font-family: 'Lexend Exa', sans-serif;
 }
 
 a{
@@ -58,6 +60,45 @@ h6{ font-size: 16px;}
   margin: 0 auto;
 }
 
+.greeting-wrapper{
+  display: grid;
+  text-align: center;
+  align-content: center;
+  border: 2px dashed #9A96A4;
+  min-height: 10em;
+}
+
+.intro-wrapper{
+  background-color: var(--thrdColor);
+  border:1px solid var(--secColor);
+
+  -webkit-box-shadow: 13px 17px 16px 0px rgba(84, 72, 96, 0.85);
+  -moz-box-shadow:    13px 17px 16px 0px rgba(84, 72, 96, 0.85);
+  box-shadow:         13px 17px 16px 0px rgba(84, 72, 96, 0.85);
+
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows: 3em 30em;
+  grid-template-areas:
+     'nav-wrapper nav-wrapper'
+     'left-column right-column'
+
+}
+
+.nav-wrapper{
+  grid-area:nav-wrapper;
+  border:1px dashed  #9A96A4
+}
+
+.left-column{
+  grid-area:left-column;
+  border:1px dashed  #9A96A4
+}
+
+.right-column{
+  grid-area:right-column;
+  border:1px dashed  #9A96A4
+}
 
 @media screen and (max-width: 1200px){
   .main-container{
